@@ -1,0 +1,32 @@
+.cabeçalho {
+    background-color: rgb(104, 104, 104);
+    padding-inline: 16px;
+    height: 125px;
+    width: 1240px;
+    margin: 0;
+}
+.h1header {
+    text-align: center;
+    font-family: sans-serif;
+}
+a {
+    font-family: sans-serif;
+    text-decoration: none;
+}
+nav {
+    max-width: 320px;
+    height: 70px;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navlista {
+    display: flex;
+    list-style: none;
+    gap: 32px;
+}
+.navlista a{
+    font-size: 18px;
+    padding-block: 16px;
+}

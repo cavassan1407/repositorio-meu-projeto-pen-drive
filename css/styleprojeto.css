@@ -1,9 +1,18 @@
+body {
+    padding: 0;
+    margin: 0;
+
+    min-height: 100vh;
+}
+
+header {
+    position: fixed;
+    width: 100vw;
+}
+
 .cabeçalho {
     background-color: rgb(104, 104, 104);
-    padding-inline: 16px;
     height: 125px;
-    width: 1240px;
-    margin: 0;
 }
 .h1header {
     text-align: center;
@@ -12,6 +21,7 @@
 a {
     font-family: sans-serif;
     text-decoration: none;
+    color: black;
 }
 nav {
     max-width: 320px;
@@ -29,4 +39,7 @@ nav {
 .navlista a{
     font-size: 18px;
     padding-block: 16px;
+}
+.contatos {
+    text-align: center;
 }

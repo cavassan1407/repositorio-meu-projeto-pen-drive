@@ -1,45 +1,221 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --black:      #0a0a0a;
+    --dark:       #141414;
+    --card-bg:    #181818;
+    --red:        #c0392b;
+    --red-bright: #e74c3c;
+    --gold:       #b8860b;
+    --gold-light: #d4a017;
+    --white:      #e8e8e8;
+    --muted:      #888;
+    --border:     #2a2a2a;
+
+    --font-display: 'Bebas Neue', 'Impact', sans-serif;
+    --font-ui:      'Barlow Condensed', sans-serif;
+    --font-body:    'Barlow', 'Arial', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     padding: 0;
     margin: 0;
-
     min-height: 100vh;
+    background-color: var(--black);
+    color: var(--white);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    overflow-x: hidden;
 }
 
-header {
-    position: fixed;
-    width: 100vw;
-}
-
-.cabeçalho {
-    background-color: rgb(104, 104, 104);
-    height: 125px;
-}
-.h1header {
-    text-align: center;
-    font-family: sans-serif;
-}
-a {
-    font-family: sans-serif;
-    text-decoration: none;
-    color: black;
-}
-nav {
-    max-width: 320px;
-    height: 70px;
-    margin-inline: auto;
+header{
+    background-color: #000000af;
+    color: rgb(255, 255, 255);
+    padding: 20px 50px;
+    height: 90px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 10;
+    text-align: center;
+    position: absolute;
+    width:90vw;
+    border-radius: 100px;
+    left: 5vw;
+    top: 2vh;
 }
-.navlista {
+
+nav ul{
     display: flex;
     list-style: none;
-    gap: 32px;
+    gap: 25px;
 }
-.navlista a{
-    font-size: 18px;
-    padding-block: 16px;
+
+nav a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: 600;
+    font-family: var(--font-ui);
+}
+
+nav a:hover{
+    color: var(--red);
 }
 .contatos {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+a {
+    cursor: pointer;
+    transition: background-color 0.5s;
+    margin-right: 40px;
+    margin-bottom: 20px;
+}
+.botao {
+    color: rgb(255, 255, 255);
+    padding: 0;
+    margin: 0;
+    width: 80px;
+    height: 80px;
+}
+a svg {
+    width: 100%;
+    height: 100%;
+}
+.botao a:hover {
+    color:  var(--red);  
+}
+.redes {
+    font-size: 12px;
+}
+li {
+    font-size: 25px;
+}
+.banner {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background:
+        linear-gradient(160deg, rgba(192,57,43,0.12) 0%, transparent 50%),
+        linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.85)),
+        url("https://i.postimg.cc/gk9dJbWx/banner-site.png")
+        center / cover no-repeat;
+}
+
+.banner-conteudo {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-top: 130px;
+    position: relative;
+    z-index: 2;
+}
+.banner-titulo {
+    display: flex;
+    flex-direction: column;
+    line-height: 0.92;
+    font-family: var(--font-display);
+    font-size: clamp(5rem, 16vw, 13rem);
+    letter-spacing: 0.02em;
+}
+
+.title-line {
+    color: var(--white);
+}
+
+.title-line.accent {
+    color: var(--red);
+    -webkit-text-stroke: 2px var(--red-bright);
+    text-shadow: 0 0 50px rgba(192,57,43,0.5);
+}
+
+.logo :hover {
+    color: rgb(179, 0, 0);
+}
+
+main {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+.sobre-os-estilos {
+    padding: 40px 20px;
+    background-color: var(--card-bg);
+    display: flex;
+    justify-content: center;
+    position: relative;
+    grid-template-columns: 80px 1fr 6px;
+    align-items: stretch;
+    background: var(--card-bg);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    margin-bottom: -1px;
+    overflow: hidden;
+    box-shadow: 5px rgba(255, 0, 0, 0.537);
+}
+.card{
+    width: 80%;
+    max-width: 500px;
+    margin: 30px auto;
+    background-color: var(--card-bg);
+    padding: 0;
+    border-left: 5px solid #ff0000;
+    border-radius: 10px;
+    box-shadow: 0 0 1px var(--red);
+    max-height: 900px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    overflow: hidden;
+    font-family: var(--font-display);
+}
+.card h2{
+    margin-bottom: 10px;
+    font-family: var(--font-display);
+}
+.card ul{
+    margin-top: 10px;
+}
+ul {
+    list-style-type: none;
+}
+li {
+    font-size: 16px;
+}
+.genero-titulo {
+    font-family: var(--font-display);
+}
+.genero-texto {
+    line-height: 1.75;
+    max-width: 640px;
+    margin-bottom: 10px;
+}
+.h4-estilos {
+    color: var(--gold-light);
+    font-family: var(--font-display);
+}
+.card * {
+    transition: 0.3s ease all;
+    margin-left: 10px;
+}
+  
+.card img {
+    margin: 0;
+    width: 500px;
+    height: 275px;
+    object-fit: cover;
+    display: block;
+}
+.card ul li {
+    margin-left: 0;
 }
